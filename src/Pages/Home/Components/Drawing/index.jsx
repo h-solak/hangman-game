@@ -30,7 +30,12 @@ const Drawing = ({ game }) => {
   return (
     <Grid item xs={12} md={6} className={styles.container}>
       {/* Body */}
-      {wrongGuessCount >= 4 && <Box className={styles.head} sx={headSx}></Box>}
+      {wrongGuessCount >= 4 && (
+        <>
+          <Box className={styles.rope} sx={sx}></Box>
+          <Box className={styles.head} sx={headSx}></Box>
+        </>
+      )}
       {wrongGuessCount >= 5 && (
         <Box className={styles.bodyCenter} sx={sx}></Box>
       )}
