@@ -1,0 +1,101 @@
+.container {
+  height: 360px;
+  position: relative;
+}
+
+/*---Body---*/
+.head {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: solid;
+  border-width: 8px;
+  position: absolute;
+  bottom: 205px;
+  left: 160px;
+  background-color: transparent;
+}
+.bodyCenter {
+  height: 80px;
+  width: 8px;
+  position: absolute;
+  bottom: 130px;
+  left: 186px;
+  border-radius: 10px;
+}
+.leftArm {
+  height: 60px;
+  width: 8px;
+  border-radius: 10px;
+  transform: rotate(25deg);
+  position: absolute;
+  bottom: 150px;
+  left: 172px;
+}
+.rightArm {
+  height: 60px;
+  width: 8px;
+  border-radius: 10px;
+  transform: rotate(-25deg);
+  position: absolute;
+  bottom: 150px;
+  left: 200px;
+}
+.leftLeg {
+  height: 60px;
+  width: 8px;
+  border-radius: 10px;
+  transform: rotate(25deg);
+  position: absolute;
+  bottom: 75px;
+  left: 172px;
+}
+.rightLeg {
+  height: 60px;
+  width: 8px;
+  border-radius: 10px;
+  transform: rotate(-25deg);
+  position: absolute;
+  bottom: 75px;
+  left: 200px;
+}
+
+/*---Gibbet---*/
+
+.gibbetTop {
+  width: 150px;
+  height: 8px;
+  position: absolute;
+  bottom: 285px;
+  left: 60px;
+  border-radius: 10px;
+}
+.gibbetCenter {
+  height: 200px;
+  width: 8px;
+  position: absolute;
+  bottom: 90px;
+  left: 60px;
+  border-radius: 10px;
+}
+
+/* height is less than 60px */
+.gibbetBottomLeft,
+.gibbetBottomRight {
+  height: 60px;
+  width: 8px;
+  border-radius: 10px;
+}
+
+.gibbetBottomLeft {
+  transform: rotate(45deg);
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+.gibbetBottomRight {
+  transform: rotate(-45deg);
+  position: absolute;
+  bottom: 40px;
+  left: 80px;
+}
