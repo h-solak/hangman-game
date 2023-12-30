@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import React from "react";
 import useColorTheme from "../../../../Contexts/Theme/useColorTheme";
 
-const LetterButton = ({ letter, isActive }) => {
+const LetterButton = ({ letter, isActive, onClick }) => {
   const { colorTheme, setColorTheme } = useColorTheme();
   const isLightTheme = colorTheme === "light";
   return (
@@ -23,6 +23,7 @@ const LetterButton = ({ letter, isActive }) => {
           backgroundColor: isLightTheme ? "#00000010" : "#00000030",
         },
       }}
+      onClick={onClick}
       disabled={!isActive}
     >
       {letter}

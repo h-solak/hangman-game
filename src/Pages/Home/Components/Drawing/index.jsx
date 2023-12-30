@@ -1,8 +1,24 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Drawing.module.css";
 import useColorTheme from "../../../../Contexts/Theme/useColorTheme";
-const Drawing = ({ wrongGuessCount }) => {
+const Drawing = ({ game }) => {
+  const [wrongGuessCount, setWrongGuessCount] = useState(0);
+
+  const calculateWrongGuessCount = () => {
+    if (game.guesses) {
+      let newCount = 0;
+      game.guesses.map((letter) => {
+        if (!game.word.split("").includes(letter)) {
+          newCount += 1;
+        }
+        setWrongGuessCount(newCount);
+      });
+    }
+  };
+  useEffect(() => {
+    calculateWrongGuessCount();
+  }, [game]);
   const { colorTheme } = useColorTheme();
   const drawingColor = colorTheme === "light" ? "#000" : "#fff";
   const sx = {
